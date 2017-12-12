@@ -18,10 +18,21 @@ module.exports = {
             },
             {
             test: /\.css$/,
-            loader: 'style-loader!css-loader?modules'         
+            loader: 'style-loader!css-loader?modules'
             },
+            {
+            test: /\.css$/,
+            loader: 'postcss-loader',
+            options: {
+                ident: 'postcss',
+                plugins: (loader) => [
+                  require('autoprefixer')()
+                ]
+              }
+            }         
         ]
     },
+ 
 
     devServer: {
         contentBase: "./public",
