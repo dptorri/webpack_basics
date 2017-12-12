@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -12,8 +13,8 @@ module.exports = {
         loaders: [
             {test: /\.json$/,loader: "json-loader"},
             {test: /\.js$/,exclude: /node_modules/,loader: 'babel-loader'},
-            {test: /\.css$/,loader: 'style-loader!css-loader?modules'},
-            {test: /\.css$/,loader: 'postcss-loader',
+            {test: /\.css$/,loader: ExtractTextPlugin('style','style-loader!css-loader?modules')},
+            {test: /\.css$/,loader: ExtractTextPlugin('style','postcss-loader'),
                 options: {
                     ident: 'postcss',
                     plugins: (loader) => [
@@ -26,6 +27,9 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
           template: __dirname + '/app/index.tmpl.html'
-      })
+      }),
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.optimize.UglifyJsPlugin(),
+      new ExtractTextPlugin("style.css")
     ]
 }
