@@ -1,0 +1,25 @@
+{
+  "name": "webpack_basics",
+  "version": "1.0.0",
+  "description": "Webpack/React tutorial with common task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dptorri/webpack_basics.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "webpack",
+    "features"
+  ],
+  "author": "Daniel Palacios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dptorri/webpack_basics/issues"
+  },
+  "homepage": "https://github.com/dptorri/webpack_basics#readme"
+}
