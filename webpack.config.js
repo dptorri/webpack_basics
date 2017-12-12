@@ -40,13 +40,15 @@ module.exports = {
       new webpack.BannerPlugin("Copyright Daniel Palacios 2017"),
       new HtmlWebpackPlugin({
           template: __dirname + '/app/index.tmpl.html'
-      })
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
 
     devServer: {
         contentBase: "./public",
         //colors: true,
         historyApiFallback: true,
-        inline: true
+        inline: true,
+        hot: true
     }
 }

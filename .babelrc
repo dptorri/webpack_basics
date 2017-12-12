@@ -1,3 +1,17 @@
 {
-    "presets" : ["react","es2015"]
+    "presets" : ["react","es2015"],
+    "env": {
+        "development":{
+            "plugins": [["react-transform",{
+                "transforms":[{
+                    "transform":"react-transform-hmr",
+                    //for React Native, pass "react-native" instead
+                    "imports": ["react"],
+                    //this is important for Webpack HMR
+                    "locals":["module"]
+                }]      
+//Note: you can put more transforms into array (here we just put one)
+            }]]
+        }
+    }
 }
