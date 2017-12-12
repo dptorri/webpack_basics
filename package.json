@@ -4,8 +4,8 @@
   "description": "Webpack/React tutorial with common task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node_modules/.bin/webpack"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dptorri/webpack_basics.git"
@@ -13,8 +13,7 @@
   "keywords": [
     "webpack",
     "react",
-    "webpack",
-    "features"
+    "tutorial"
   ],
   "author": "Daniel Palacios",
   "license": "MIT",
