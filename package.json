@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/webpack"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dptorri/webpack_basics.git"
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/dptorri/webpack_basics#readme",
   "devDependencies": {
     "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^2.9.7"
   }
 }
