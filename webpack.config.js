@@ -9,18 +9,18 @@ module.exports = {
         loaders: [
             {
             test: /\.json$/,
-            loader: "json"
-            }
-          ]
-    },
-    {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-    },
-    {
-        test: /\.css$/,
-        loader: 'style!css'         
+            loader: "json-loader"
+            },
+            {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            },
+            {
+            test: /\.css$/,
+            loader: 'style-loader!css-loader'         
+            },
+        ]
     },
 
     devServer: {
