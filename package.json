@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/dptorri/webpack_basics/issues"
   },
-  "homepage": "https://github.com/dptorri/webpack_basics#readme"
+  "homepage": "https://github.com/dptorri/webpack_basics#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
