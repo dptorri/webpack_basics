@@ -4,7 +4,8 @@
   "description": "Webpack/React tutorial with common task",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server"
+    "start": "node_modules/.bin/webpack-dev-server --progress",
+    "build":"NODE_ENV=production node_modules/.bin/webpack -config ./webpack.production.config.js --progress"
   },
   "repository": {
     "type": "git",
